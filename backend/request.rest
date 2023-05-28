@@ -1,0 +1,29 @@
+GET http://localhost:5000/buku
+
+###
+GET http://localhost:5000/buku/64731527b5f8cf5057cb85b2
+
+###
+POST http://localhost:5000/buku
+Content-Type: application/json
+
+{
+   "kode": "B0001",
+   "judul": "Bisnis Jangan Pesimis",
+   "pengarang": "Budi Harambe",
+   "penerbit" : "Matahari Terbit"
+}
+
+###
+PATCH http://localhost:5000/buku/64731527b5f8cf5057cb85b2
+Content-Type: application/json
+
+{
+   "kode": "B0001",
+   "judul": "Bisnis Harus Optimis",
+   "pengarang": "Budi Harambe",
+   "penerbit" : "Matahari Terbit"
+}
+
+###
+DELETE http://localhost:5000/buku/64731527b5f8cf5057cb85b2
