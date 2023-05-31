@@ -26,7 +26,7 @@ const AddBook = () => {
 
   return (
     <div className="columns is-centered mt-5">
-      <div className="column is-half">
+      <div className="column is-half box is-fullwidth">
         <form onSubmit={saveBook}>
           <div className="field">
             <label className="label">Kode Buku</label>
@@ -76,11 +76,16 @@ const AddBook = () => {
               />
             </div>
           </div>
-          <div className="field">
+          <div className="field is-grouped is-grouped-centered">
             <div className="control">
               <button type="submit" className="button is-success">
                 Simpan
               </button>
+            </div>
+            <div className="control">
+              <a href="/" className="button is-light">
+                Cancel
+              </a>
             </div>
           </div>
         </form>

@@ -25,11 +25,11 @@ export const BookList = () => {
 
   return (
     <div className="columns is-centered">
-      <div className="column is-half mt-5">
+      <div className="column mt-5 ">
         <Link to="add" className="button is-success">
           Tambah Data
         </Link>
-        <table className="table is-triped is-fullwidth">
+        <table className="table is-striped is-narrow is-hoverable is-fullwidth">
           <thead>
             <tr>
               <th>#</th>

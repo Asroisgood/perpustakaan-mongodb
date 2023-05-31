@@ -38,7 +38,7 @@ const EditBook = () => {
   }
 
   return (
-    <div className="columns is-centered mt-5">
+    <div className="columns is-centered mt-5 box">
       <div className="column is-half">
         <form onSubmit={updateBook}>
           <div className="field">
@@ -89,11 +89,16 @@ const EditBook = () => {
               />
             </div>
           </div>
-          <div className="field">
+          <div className="field is-group is-grouped-centered">
             <div className="control">
               <button type="submit" className="button is-success">
                 Update
               </button>
+            </div>
+            <div className="control">
+              <a href="/" className="button is-light">
+                Cancel
+              </a>
             </div>
           </div>
         </form>
