@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useNavigate, useParams } from 'react-router-dom'
 
-const EditBuku = () => {
+const EditBook = () => {
   const [kode, setKode] = useState('')
   const [judul, setJudul] = useState('')
   const [pengarang, setPengarang] = useState('')
@@ -11,21 +11,21 @@ const EditBuku = () => {
   const { id } = useParams()
 
   useEffect(() => {
-    getBukuById()
+    getBookById()
   }, [])
 
-  const getBukuById = async () => {
-    const response = await axios.get(`http://localhost:5000/buku/${id}`)
+  const getBookById = async () => {
+    const response = await axios.get(`http://localhost:5000/book/${id}`)
     setKode(response.data.kode)
     setJudul(response.data.judul)
     setPengarang(response.data.pengarang)
     setPenerbit(response.data.penerbit)
   }
 
-  const updateBuku = async (e) => {
+  const updateBook = async (e) => {
     e.preventDefault()
     try {
-      await axios.patch(`http://localhost:5000/buku/${id}`, {
+      await axios.patch(`http://localhost:5000/book/${id}`, {
         kode,
         judul,
         pengarang,
@@ -40,7 +40,7 @@ const EditBuku = () => {
   return (
     <div className="columns is-centered mt-5">
       <div className="column is-half">
-        <form onSubmit={updateBuku}>
+        <form onSubmit={updateBook}>
           <div className="field">
             <label className="label">Kode Buku</label>
             <div className="control">
@@ -102,4 +102,4 @@ const EditBuku = () => {
   )
 }
 
-export default EditBuku
+export default EditBook

@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const schemaBuku = mongoose.Schema({
+const schemaBook = mongoose.Schema({
   kode: {
     type: String,
     required: true,
@@ -19,4 +19,4 @@ const schemaBuku = mongoose.Schema({
   },
 })
 
-export default mongoose.model('Buku', schemaBuku)
+export default mongoose.model('Books', schemaBook)

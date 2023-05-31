@@ -2,22 +2,22 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-export const BukuList = () => {
-  const [buku, setBuku] = useState([])
+export const BookList = () => {
+  const [book, setBook] = useState([])
 
   useEffect(() => {
-    getBuku()
+    getBook()
   }, [])
 
-  const getBuku = async () => {
-    const response = await axios.get('http://localhost:5000/buku')
-    setBuku(response.data)
+  const getBook = async () => {
+    const response = await axios.get('http://localhost:5000/book')
+    setBook(response.data)
   }
 
-  const deleteBuku = async (id) => {
+  const deleteBook = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/buku/${id}`)
-      getBuku()
+      await axios.delete(`http://localhost:5000/book/${id}`)
+      getBook()
     } catch (error) {
       console.log(error.response)
     }
@@ -41,7 +41,7 @@ export const BukuList = () => {
             </tr>
           </thead>
           <tbody>
-            {buku.map((data, i) => (
+            {book.map((data, i) => (
               <tr key={data._id}>
                 <td>{++i}</td>
                 <td>{data.kode}</td>
@@ -56,7 +56,7 @@ export const BukuList = () => {
                     Edit
                   </Link>
                   <button
-                    onClick={() => deleteBuku(data._id)}
+                    onClick={() => deleteBook(data._id)}
                     className="button is-danger is-small"
                   >
                     Hapus

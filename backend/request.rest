@@ -1,10 +1,10 @@
-GET http://localhost:5000/buku
+GET http://localhost:5000/book
 
 ###
-GET http://localhost:5000/buku/64731527b5f8cf5057cb85b2
+GET http://localhost:5000/book/64731527b5f8cf5057cb85b2
 
 ###
-POST http://localhost:5000/buku
+POST http://localhost:5000/book
 Content-Type: application/json
 
 {
@@ -15,7 +15,7 @@ Content-Type: application/json
 }
 
 ###
-PATCH http://localhost:5000/buku/64731527b5f8cf5057cb85b2
+PATCH http://localhost:5000/book/64731527b5f8cf5057cb85b2
 Content-Type: application/json
 
 {
@@ -26,4 +26,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:5000/buku/64731527b5f8cf5057cb85b2
+DELETE http://localhost:5000/book/64731527b5f8cf5057cb85b2

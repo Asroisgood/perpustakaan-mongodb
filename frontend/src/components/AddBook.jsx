@@ -2,17 +2,17 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
-const AddBuku = () => {
+const AddBook = () => {
   const [kode, setKode] = useState('')
   const [judul, setJudul] = useState('')
   const [pengarang, setPengarang] = useState('')
   const [penerbit, setPenerbit] = useState('')
   const navigate = useNavigate()
 
-  const saveBuku = async (e) => {
+  const saveBook = async (e) => {
     e.preventDefault()
     try {
-      await axios.post('http://localhost:5000/buku', {
+      await axios.post('http://localhost:5000/book', {
         kode,
         judul,
         pengarang,
@@ -27,7 +27,7 @@ const AddBuku = () => {
   return (
     <div className="columns is-centered mt-5">
       <div className="column is-half">
-        <form onSubmit={saveBuku}>
+        <form onSubmit={saveBook}>
           <div className="field">
             <label className="label">Kode Buku</label>
             <div className="control">
@@ -89,4 +89,4 @@ const AddBuku = () => {
   )
 }
 
-export default AddBuku
+export default AddBook
