@@ -27,3 +27,19 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:5000/book/6477860ae5fe4be278ab26e1
+
+
+###
+GET http://localhost:5000/user
+
+###
+POST http://localhost:5000/user
+Content-Type: application/json
+
+{
+   "kode": "U003",  
+  "nama": "Tobaclove",
+  "jenisKelamin": "laki-laki",
+  "contacts": {"email": "tobaclove@gmail.com", "noHp": "08525858528"},
+  "roles": {"code" : 3, "desc": "User"} 
+}

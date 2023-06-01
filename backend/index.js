@@ -3,6 +3,7 @@ import mongoose from 'mongoose'
 import cors from 'cors'
 
 import BookRoute from './routes/BookRoute.js'
+import UserRoute from './routes/UserRoute.js'
 
 const app = express()
 mongoose.connect('mongodb://127.0.0.1:27017/library', {
@@ -17,6 +18,7 @@ db.once('open', () => console.log('Database Connected!'))
 app.use(cors())
 app.use(express.json())
 app.use(BookRoute)
+app.use(UserRoute)
 
 app.listen(5000, () =>
   console.log('--- Listen to Port [5000]... Server is ready! ---')
