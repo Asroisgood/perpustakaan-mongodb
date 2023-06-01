@@ -27,7 +27,7 @@ const BookList = () => {
     <>
       <div className="columns">
         <div className="column is-one-third">
-          <h1 className="title">Tabel User</h1>
+          <h1 className="title">Tabel Buku</h1>
         </div>
         <div className="column">
           <Link to="add" className="button is-success">
