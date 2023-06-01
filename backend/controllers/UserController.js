@@ -21,7 +21,7 @@ export const saveUser = async (req, res) => {
 
 export const getUserById = async (req, res) => {
   try {
-    const data = await User.find(req.params.id)
+    const data = await User.findById(req.params.id)
     res.json(data)
   } catch (error) {
     res.status(500).json({ msg: error.message })
@@ -34,6 +34,7 @@ export const updateUser = async (req, res) => {
       { _id: req.params.id },
       { $set: req.body }
     )
+    res.status(200).json(updatedData)
   } catch (error) {
     res.status(500).json({ msg: error.message })
   }
@@ -42,6 +43,7 @@ export const updateUser = async (req, res) => {
 export const deleteUser = async (req, res) => {
   try {
     const deletedData = await User.deleteOne({ _id: req.params.id })
+    res.status(200).json(deletedData)
   } catch (error) {
     res.status(500).json({ msg: error.message })
   }
