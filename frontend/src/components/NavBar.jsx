@@ -3,7 +3,7 @@ import React from 'react'
 const NavBar = () => {
   return (
     <nav
-      className="navbar is-dark"
+      className="navbar is-dark mb-3"
       role="navigation"
       aria-label="main navigation"
       style={{ height: '2rem' }}
@@ -21,6 +21,11 @@ const NavBar = () => {
           <div className="navbar-item">
             <a className="navbar-link is-arrowless" href="/">
               <span className="is-size-5">Home</span>
+            </a>
+          </div>
+          <div className="navbar-item">
+            <a className="navbar-link is-arrowless" href="/user">
+              <span className="is-size-5">User</span>
             </a>
           </div>
         </div>

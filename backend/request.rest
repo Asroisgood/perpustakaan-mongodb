@@ -37,9 +37,27 @@ POST http://localhost:5000/user
 Content-Type: application/json
 
 {
-   "kode": "U003",  
-  "nama": "Tobaclove",
-  "jenisKelamin": "laki-laki",
-  "contacts": {"email": "tobaclove@gmail.com", "noHp": "08525858528"},
-  "roles": {"code" : 3, "desc": "User"} 
+   "kode": "U005",  
+   "nama": "TES DELETE",
+   "jenisKelamin": "perempuan",
+   "contacts": {"email": "tes@gmail.com", "noHP": "1231231"},
+   "roles": {"code" : 3, "desc": "User"} 
 }
+
+###
+PATCH http://localhost:5000/user/6478d213eff8a2a4bbd6d541
+Content-Type: application/json
+
+{
+   "kode": "U004",  
+   "nama": "Ribi",
+   "jenisKelamin": "perempuan",
+   "contacts": {"email": "ribi@hotmail.com", "noHP": "0985546842"},
+   "roles": {"code" : 3, "desc": "User"} 
+}
+
+###
+GET http://localhost:5000/user/6478d5a25f5f22276d30e34b
+
+###
+DELETE http://localhost:5000/user/6478d5a25f5f22276d30e34b
